@@ -90,6 +90,8 @@ plt.ylim(0,3)
 for i, m in enumerate(methods):
 # be aware that the errorevery keyword is currently not supported in Matplotlib.
 # There is an open pull request, so it will hopefully be included in MPL soon.
-    plt.errorbar(range(len(mean[i,:])), mean[i,:], yerr=std[i,:], errorevery=10, label=m.name)
+    # plt.errorbar(range(len(mean[i,:])), mean[i,:], yerr=std[i,:], errorevery=10, label=m.name)
+    plt.errorbar(range(len(mean[i,:])), mean[i,:], label=m.name)
 plt.legend()
 plt.show()
+plt.savefig('boyan.png')
